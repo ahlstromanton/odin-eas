@@ -1,10 +1,16 @@
-#masterDivContainer {
-    
+body {
+    margin: 0px;
 }
+
+#masterDivContainer {
+    display: flex;
+    justify-content: center;
+}
+
 
 .square {
     background: red; 
     border: 1px solid; 
-    height: 49px; 
-    width: 49px;
+    aspect-ratio: 1/1;
+    width: 100%;
 }
