@@ -2,15 +2,13 @@ body {
     margin: 0px;
 }
 
-#masterDivContainer {
+.flexRow {
     display: flex;
-    justify-content: center;
 }
 
 
 .square {
-    background: red; 
-    border: 1px solid; 
-    aspect-ratio: 1/1;
-    width: 100%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
 }
