@@ -4,7 +4,8 @@ function createGrid() {
     while (numberOfDivs < requestedDivs) {
         const container = document.querySelector('#masterDivContainer');
         const div = document.createElement('div');
-        div.setAttribute('style', 'backround: red; border: 1px solid; height: 49px; width: 49px;');
+        div.setAttribute('class', 'square');
+        div.setAttribute('id', 'square-item' + numberOfDivs);
         container.appendChild(div);
         numberOfDivs++;
     }
