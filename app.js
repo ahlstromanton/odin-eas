@@ -18,6 +18,7 @@ function createColumns(rowContainer) {
     for (let i = 0; i < requestedDivs; i++) {
         const div = document.createElement('div');
         div.setAttribute('class', 'square');
+        div.addEventListener('mouseenter',paintWhenHovered);
         rowContainer.appendChild(div);
     }
 }
@@ -35,3 +36,6 @@ function requestGrid() {
     }
 }
 
+function paintWhenHovered() {
+    this.style.backgroundColor = 'black';
+}
