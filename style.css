@@ -1,12 +1,28 @@
 body {
     margin: 0px;
+    background-color: rgb(233, 233, 233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header,
+h1 {
+    text-align: center;
+}
+
+#gridContainerWrapper {
+    /* just a quick ideation, needs fix */
+    margin-left: 30%;
+    width: 50%;
+}
+
+#gridContainer {
+    background-color: rgb(255, 255, 255);
 }
 
 .flexRow {
     display: flex;
     height: 100%;
 }
-
 
 .square {
     width: 100%;

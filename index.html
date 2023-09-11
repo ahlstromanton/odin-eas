@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
     <button id="userQuery" onclick="requestGrid()">Request New Grid</button>
-    <div id="gridContainer"></div>
+    <div id="gridContainerWrapper">
+        <div id="gridContainer"></div>
+    </div>
 </body>
+
 </html>
