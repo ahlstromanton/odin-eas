@@ -1,6 +1,6 @@
-const requestedDivs = 16;
+let requestedDivs = 0;
 
-function createGrid() {
+function createGrid(requestedDivs) {
     const container = document.getElementById('gridContainer');
     for (let i = 0; i < requestedDivs; i++) {
         createRow(container);
@@ -22,4 +22,16 @@ function createColumns(rowContainer) {
     }
 }
 
-createGrid();
+function requestGrid() {
+    const container = document.getElementById('gridContainer');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    requestedDivs = prompt("How big of a grid do you want? Enter a number between 1-99.");
+    if (requestedDivs > 0 && requestedDivs < 100) {
+        createGrid(requestedDivs);
+    } else {
+        alert("Please use a number between 1-100.")
+    }
+}
+
