@@ -1,7 +1,10 @@
 body {
     margin: 0px;
-    background-color: rgb(233, 233, 233);
+    background: rgb(38, 33, 136);
+    background: linear-gradient(45deg, rgba(38, 33, 136, 1) 0%, rgba(83, 83, 180, 1) 47%, rgba(0, 140, 168, 1) 100%);
+    background-attachment: fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:
 }
 
 .header,
@@ -11,12 +14,16 @@ h1 {
 
 #gridContainerWrapper {
     /* just a quick ideation, needs fix */
-    margin-left: 30%;
-    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #gridContainer {
     background-color: rgb(255, 255, 255);
+    width: 75%;
+    height: 75%;
 }
 
 .flexRow {
