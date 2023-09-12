@@ -1,4 +1,5 @@
-let requestedDivs = 0;
+let requestedDivs = 25;
+requestGrid(setByButton);
 
 function createGrid(requestedDivs) {
     const container = document.getElementById('gridContainer');
@@ -23,12 +24,14 @@ function createColumns(rowContainer) {
     }
 }
 
-function requestGrid() {
+function requestGrid(setByButton) {
     const container = document.getElementById('gridContainer');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    requestedDivs = prompt("How big of a grid do you want? Enter a number between 1-99.");
+    if (!setByButton) {
+        requestedDivs = prompt("How big of a grid do you want? Enter a number between 1-99.");
+    }
     if (requestedDivs > 0 && requestedDivs < 100) {
         createGrid(requestedDivs);
     } else {
@@ -40,3 +43,7 @@ function paintWhenHovered() {
     this.style.backgroundColor = 'black';
 }
 
+function setByButton() {
+    let setByButton = true;
+    return setByButton;
+}
