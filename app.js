@@ -1,5 +1,6 @@
 let requestedDivs = 25;
-requestGrid(setByButton);
+let setBySlider = false;
+requestGrid(setBySlider);
 
 function createGrid(requestedDivs) {
     const container = document.getElementById('gridContainer');
@@ -24,26 +25,29 @@ function createColumns(rowContainer) {
     }
 }
 
-function requestGrid(setByButton) {
+function requestGrid(setBySlider) {
     const container = document.getElementById('gridContainer');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    if (!setByButton) {
-        requestedDivs = prompt("How big of a grid do you want? Enter a number between 1-99.");
-    }
-    if (requestedDivs > 0 && requestedDivs < 100) {
+    requestedDivs = //SLIDER VALUE
         createGrid(requestedDivs);
-    } else {
-        alert("Please use a number between 1-100.")
-    }
 }
 
 function paintWhenHovered() {
     this.style.backgroundColor = 'black';
 }
 
-function setByButton() {
-    let setByButton = true;
-    return setByButton;
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+    output.innerHTML = this.value;
+}
+
+slider.oninput = function () {
+    setBySlider = true;
+    return setBySlider;
 }
