@@ -1,5 +1,7 @@
-let requestedDivs = 25;
+let slider = document.getElementById("myRange");
+let requestedDivs = slider.value;
 let setBySlider = false;
+showValue();
 requestGrid(setBySlider);
 
 function createGrid(requestedDivs) {
@@ -38,9 +40,11 @@ function paintWhenHovered() {
     this.style.backgroundColor = 'black';
 }
 
-let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+//Get output element and show the value there
+function showValue() {
+    let output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+}
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
